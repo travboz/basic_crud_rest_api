@@ -30,14 +30,22 @@ This repository contains the code for a basic CRUD API used to query a PostgreSQ
 |PUT:| /users/:id | updateUser() |
 |DELETE:| /users/:id | deleteUser() |
 
-- When using the `POST` or `PUT` routes to create a user or update a user, the following request bodies are included:
-  | HTTP Method | URL | JSON |
-| -- | -- | -- |
-|POST:| /users | {
+### When using the `POST` or `PUT` routes to create a user or update a user, the following request bodies are included:
+For the `POST` route of `/users` to create a new user we need to pass some `json` with the request. 
+```JavaScript
+{
     "name": "new",
     "email": "new_user@example.com"
-} |  |
-|PUT:| /users/:id | {
+}
+```
+
+For the `PUT` route of `/users/:id` to update a user's information, we must also provide `json` with the request.
+```JavaScript
+{
     "name": "Paul",
     "email": "p@example.com"
-} | 
+}
+```
+This must be `PUT` to a valid user, for example `/users/1`.
+
+These will return logged outputs reporting of a successful query.
