@@ -21,14 +21,14 @@ This repository contains the code for a basic CRUD API used to query a PostgreSQ
 
 - Navigate to the url that the server is running on and use [Postman](https://www.postman.com/) to interact with the API.
 
-| HTTP Method | URL | Function |
+| HTTP Method | Endpoint | Relevant Function |
 | -- | -- | -- |
-|GET:| / | displayHome() |
-|GET:| /users | getUsers() |
-|GET:| /users/:id | getUserById() |
-|POST:| /users | createUser() |
-|PUT:| /users/:id | updateUser() |
-|DELETE:| /users/:id | deleteUser() |
+|GET| / | displayHome() |
+|GET| /users | getUsers() |
+|GET| /users/:id | getUserById() |
+|POST| /users | createUser() |
+|PUT| /users/:id | updateUser() |
+|DELETE| /users/:id | deleteUser() |
 
 ### When using the `POST` or `PUT` routes to create a user or update a user, the following request bodies are included:
 For the `POST` route of `/users` to create a new user we need to pass some `json` with the request. 
